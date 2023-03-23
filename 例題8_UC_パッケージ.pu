@@ -1,4 +1,4 @@
-@startuml
+@startuml ユースケース図
 package 選択授業
 package 学生
 package 先生
