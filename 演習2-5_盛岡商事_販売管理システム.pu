@@ -1,9 +1,9 @@
 @startuml ユースケース図
 actor 出荷担当者 #DDDDDD;line:black;line.bold;
 rectangle 販売管理システム{
-    usecase 注文商品を確認
-    usecase 出荷状況を登録
+    usecase 注文商品を確認する
+    usecase 出荷状況を登録する
 }
-出荷担当者.>出荷状況を登録
-出荷担当者.>注文商品を確認
+出荷担当者.>出荷状況を登録する
+出荷担当者.>注文商品を確認する
 @enduml
