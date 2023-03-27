@@ -1,0 +1,40 @@
+@startuml
+
+left to right direction
+
+actor 利用者 as user #DDDDDD;line:black;line.bold;
+actor 従業員 as employee #DDDDDD;line:black;line.bold;
+actor 管理者 as admin #DDDDDD;line:black;line.bold;
+
+rectangle ホテル予約システム {
+    usecase 会員登録する 
+    usecase キャンペーン
+    usecase 空室状況を閲覧する
+    usecase 予約集計をする
+    usecase 空室状況を入力する
+    usecase (<u>予約する</u>\n拡張点\nキャンペーン期間\n会員登録する) as input
+    usecase ログインをする
+}
+
+
+    user ----> 会員登録する
+    user ----> 空室状況を閲覧する
+
+    会員登録する ....> input : <<  extend  >>
+    キャンペーン ....> input : <<  extend  >>
+    input ....> ログインをする : <<  extend  >>
+
+    予約集計をする ....> ログインをする : <<  include  >>
+    空室状況を入力する ....> ログインをする : <<  include  >>
+
+    employee <|---- admin
+
+    admin ----> 予約集計をする
+
+    employee ----> 空室状況を入力する
+
+
+
+
+
+@enduml
