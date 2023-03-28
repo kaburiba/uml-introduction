@@ -22,7 +22,7 @@ rectangle ホテル予約システム {
 
     会員登録する ....> input : <<  extend  >>
     キャンペーン ....> input : <<  extend  >>
-    input ....> ログインをする : <<  extend  >>
+    input ....> ログインをする : <<  include  >>
 
     予約集計をする ....> ログインをする : <<  include  >>
     空室状況を入力する ....> ログインをする : <<  include  >>
@@ -32,9 +32,4 @@ rectangle ホテル予約システム {
     admin ----> 予約集計をする
 
     employee ----> 空室状況を入力する
-
-
-
-
-
 @enduml
