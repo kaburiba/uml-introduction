@@ -1,0 +1,38 @@
+@startuml
+    skinparam classAttributeIconSize 0
+    hide Employee circle
+    ' class A <<stereotype>>{}
+    ' class B {
+    '     - 属性１.int
+    '     - 属性2.String
+    ' }
+    ' class C {
+    ' ---
+    ' + 操作１();void
+    ' + 操作2();String
+    ' }
+        
+    ' class D {
+    
+    ' - 属性１.int
+    ' - 属性2.String
+    ' ---
+    ' + 操作１();void
+    ' + 操作2();String
+    ' }
+
+    class Employee{
+    -id:int=0
+    -name :String
+    #department:String
+    /勤務年数:int
+    ---
+    +seId(id:int);void
+    +getId();int
+    +setName(name:String):void
+    +getName():String
+    +setDept(dep:String):void
+    +getDept():String
+
+    }
+@enduml
