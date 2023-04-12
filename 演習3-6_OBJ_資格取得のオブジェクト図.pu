@@ -1,4 +1,4 @@
-@startuml 
+@startuml   
 object "髙橋洋平さん:社員クラス" as 髙橋洋平{
 
 }

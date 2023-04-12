@@ -1,4 +1,4 @@
-@startuml
+@startuml a
 left to right direction
 object "<u>空車リスト2: 空車リスト</u>" as k2 {
 日付
