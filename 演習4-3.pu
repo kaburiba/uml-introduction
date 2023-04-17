@@ -1,0 +1,17 @@
+@startuml
+
+hide footbox
+participant ":データ更新コントローラ" as user   <<control>>
+participant ":ホテル" as  y <<hotel>>
+participant ":予約" as  z
+
+activate user
+activate y
+create z
+y -> z <<create>>
+user -> y :予約する
+y -> y: 予約記録（）
+activate y
+deactivate user
+deactivate y
+@enduml
