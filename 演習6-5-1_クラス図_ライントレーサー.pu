@@ -1,0 +1,17 @@
+@startuml あ
+class "ライントレーサー" as a{}
+class "光センサー" as b {}
+class "右モーター" as c {}
+class "左モーター" as d {}
+class "電源SW" as e {}
+class  "CPU" as f{} 
+
+a "1"*--"1" b
+a "1"*--"1" c
+a "1"*--"1" d
+a "1"*--"1" e
+a "1"*--"1" f
+
+
+
+@enduml

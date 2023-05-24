@@ -1,0 +1,16 @@
+@startuml a
+actor 客 as a
+actor ベンダー as b
+
+rectangle 自販機 {
+usecase ジュース補充 as d
+usecase 料金を回収 as e
+usecase 客が料金を払う as f
+usecase ボタンをおす as g
+}
+a-->g
+b-->d
+b-->e
+a-->f
+
+@enduml

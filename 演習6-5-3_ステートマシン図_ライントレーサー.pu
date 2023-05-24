@@ -1,0 +1,14 @@
+@startuml ライントレーサーステートマシン図
+[*] -left-> 電源SWOFF状態
+state 電源SWON状態 {
+    state entry <<entryPoint>>
+    state exit <<exitPoint>>
+    電源SWOFF状態 --> entry: 電源SWをON
+    entry --> 右旋回: 暗い場合
+    entry --> 左旋回: 明るい場合
+    右旋回 --> exit
+    左旋回 --> exit
+    exit --> 電源SWOFF状態: 電源SWをOFF
+}
+電源SWOFF状態 -left-> [*]
+@enduml
